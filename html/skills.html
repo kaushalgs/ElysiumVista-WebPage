@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HeroPage</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="../css/NavBar.css">
+        <link rel="stylesheet" href="../css/skills.css">
+    </head>
+    
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img alt="Elysium Vista Logo" src="../assets/svg/ElysiumVistaLogo.svg"/>
+            <h1><span style="font-size: 2.1rem; color: aqua;">E</span>lysium vista</h1>
+        </div>
+        <ul class="navItem">
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Learn</a></li>
+            <li><a href="#"><i class="fas fa-tasks"></i> Skills</a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i> Purchases</a></li>
+            <li><a href="#"><i class="fas fa-undo"></i> Returns</a></li>
+            <li><a href="#"><i class="fas fa-images"></i> Gallery</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+    </div>
+    <div class="main-content" id="main-content">
+        <div class="navbar">
+            <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Work <i class="fas fa-caret-down"></i></a></li>
+                <li><a href="#">Learn <i class="fas fa-caret-down"></i></a></li>
+            </ul>
+            <div class="iconSet">
+                <span class="innerIconSet">
+                <i class="fas fa-search search-icon"></i>
+                <i class="fas fa-paper-plane profile-icon"></i>
+            </span>
+                <img class="ProfilePic" alt="Profile Picture" height="35" src="https://storage.googleapis.com/a1aa/image/Kz96sYeG4YRHAy3X4KwEolGRrodR6QGfCKakwDk83FNTflcnA.jpg" />
+            </div>
+        </div>
+    </div>
+    <div class="profile-header">
+        <img id="profile-pic" alt="Profile picture of a person sitting outdoors" />
+        <div class="profile-info">
+            <h1 id="profile-name"></h1>
+            <p id="followers-count"></p>
+            <button class="follow-btn">Follow</button>
+        </div>
+    </div>
+    <div class="bio">
+        <h2>Bio</h2>
+        <p id="bio-text"></p>
+    </div>
+    <div class="achievements">
+        <h2>Achievements</h2>
+        <ul id="achievements-list"></ul>
+    </div>
+    <div class="language-bundle">
+        <h2>THE COMPLETE LANGUAGE BUNDLE</h2>
+        <div id="language-icons"></div>
+    </div>
+
+    <script>
+        // Profile Data
+        const profileData = {
+            name: "Kishan Bhandary",
+            followers: "69k",
+            profilePic: "https://storage.googleapis.com/a1aa/image/DKEVR8cMYr7zOZo9UEyWwi6GoTSMG1jShJGaaOMOikR0gq7E.jpg",
+            bio: "A portfolio biography is a section of a professional portfolio that summarizes a candidate's work history, personal values and professional achievements. In the writing, digital media and tec."
+        };
+
+        // Achievements Data
+        const achievementsData = [
+            "Workplace achievements: Giving a great presentation, improving product sales, or developing new procedures",
+            "School achievements: Scholarships or other awards",
+            "Volunteer achievements: Achievements from volunteering",
+            "Hobby achievements: Achievements from hobbies"
+        ];
+
+        // Language Icons Data
+        const languageIconsData = [
+            { src: "https://storage.googleapis.com/a1aa/image/eUBy5xWn9My7MaoeeslKhWKhxs8umCUbDAJU4znUPzJxGUdnA.jpg", alt: "HTML5 logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/h6JQ3rtBZuZbOt64eRDCG3fVeGfnCO0VPgoJ5ar0fBgrbQ1dC.jpg", alt: "CSS3 logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/4fRwlQdmjySbOqXVgAdMH3xmk2Se5HBfYG497PwKI8n4GUdnA.jpg", alt: "JavaScript logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/J8ggwE6QDnbBGReAf8HXk6B3SvzqQecElWRGfGzegeGp1gq7E.jpg", alt: "React logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/4nu5Ny60RgayKJsC4VAhjGOb60HcOvsD9KjLlJ7CtHs2gq7E.jpg", alt: "Node.js logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/4muJkkye28RMJa7CqfzZV4Ywrw7vlwOV8r8bG2QW48CTDquTA.jpg", alt: "MongoDB logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/J1kYDYCenQSoN6kKes46ztebbxvc14hMuJPCJvkmzT6UGUdnA.jpg", alt: "SQL logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/Gj2yWflHcQQ1N66MxuC8tvdSj9sX5XbyQkxyMVRDv5NoBV3JA.jpg", alt: "C++ logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/eWsPR5tYsg3VW6VXRGGuge3T6LNIOcmfz4BBa77qLTNrGUdnA.jpg", alt: "C logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/XRZyIQAhBZJHPhGQQ5wOBoysiLFIKnkUA0uXPt1f2LgmBV3JA.jpg", alt: "PHP logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/P3qnfYvPc6UBcSS2Cgse5Q3kAplWn58fj57uck1UOcAWGUdnA.jpg", alt: "Java logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/tlQVmsIN7FqLER0CtfZPGMtaevtnT3qjewjJKeyLKyN5Mo6OB.jpg", alt: "Android logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/ffBpOsrq3cieJpgldFdx8ftVYb06YNbamuuZnKpqSA1eZQ1dC.jpg", alt: "Database logo" },
+            { src: "https://storage.googleapis.com/a1aa/image/reoGr1Ec5hxKOizdGpRuq5STTtdlQh4220yTTjeCd5lbDquTA.jpg", alt: "OOPs logo" }
+        ];
+
+        // Populate Profile Data
+        document.getElementById('profile-name').innerText = profileData.name;
+        document.getElementById('followers-count').innerText = `Followers ${profileData.followers}`;
+        document.getElementById('profile-pic').src = profileData.profilePic;
+        document.getElementById('bio-text').innerText = profileData.bio;
+
+        // Populate Achievements Data
+        const achievementsList = document.getElementById('achievements-list');
+        achievementsData.forEach(achievement => {
+            const li = document.createElement('li');
+            li.innerText = achievement;
+            achievementsList.appendChild(li);
+        });
+
+        // Populate Language Icons Data
+        const languageIcons = document.getElementById('language-icons');
+        languageIconsData.forEach(icon => {
+            const img = document.createElement('img');
+            img.src = icon.src;
+            img.alt = icon.alt;
+            languageIcons.appendChild(img);
+        });
+    </script>
+    <script>
+        document.getElementById('sidebar-toggle').addEventListener('click', function(event) {
+            event.stopPropagation();
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(event) {
+            var sidebar = document.getElementById('sidebar');
+            var sidebarToggle = document.getElementById('sidebar-toggle');
+            if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Add event listeners to sidebar items to toggle 'active' class
+        var sidebarItems = document.querySelectorAll('.sidebar ul li a');
+        sidebarItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                sidebarItems.forEach(function(i) {
+                    i.parentElement.classList.remove('active');
+                });
+                item.parentElement.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

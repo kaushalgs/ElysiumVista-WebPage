@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Grey+Qo&family=Lumanosimo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html{
+    font-size: 62.5%;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.profile-header {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+.profile-header img.cover-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.profile-header img.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #00f0ff;
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+}
+.profile-header .profile-info {
+    margin-top: 60px;
+}
+.profile-header .profile-info h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.profile-header .profile-info p {
+    font-size: 14px;
+    color: #aaa;
+}
+.profile-header .profile-info .actions {
+    margin-top: 10px;
+}
+.profile-header .profile-info .actions button {
+    background-color: #00f0ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #000;
+    font-size: 14px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.profile-header .profile-info .actions button:hover {
+    background-color: #00c0cc;
+}
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-bottom: 1px solid #333;
+}
+.nav-tabs a {
+    padding: 10px 20px;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-tabs a.active {
+    color: #00f0ff;
+    border-bottom: 2px solid #00f0ff;
+}
+.posts {
+    padding: 20px;
+}
+.post {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.post .post-header {
+    display: flex;
+    align-items: center;
+}
+.post .post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.post .post-header .post-info {
+    flex-grow: 1;
+}
+.post .post-header .post-info h2 {
+    font-size: 16px;
+    margin: 0;
+}
+.post .post-header .post-info p {
+    font-size: 12px;
+    color: #aaa;
+    margin: 0;
+}
+.post .post-header .post-info .follow-btn {
+    background-color: #00f0ff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #000;
+    font-size: 12px;
+    cursor: pointer;
+}
+.post .post-header .post-info .follow-btn:hover {
+    background-color: #00c0cc;
+}
+.post .post-content {
+    margin-top: 10px;
+}
+.post .post-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+.post .post-content p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.post .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.post .post-footer .actions {
+    display: flex;
+    align-items: center;
+}
+.post .post-footer .actions i {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.post .post-footer .actions i:hover {
+    color: #00f0ff;
+}

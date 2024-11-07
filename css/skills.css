@@ -1,0 +1,86 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+.profile-header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #00ff00;
+}
+.profile-info {
+    margin-left: 20px;
+}
+.profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.profile-info p {
+    margin: 5px 0;
+    color: #ccc;
+}
+.profile-info .follow-btn {
+    background-color: #00ff00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.profile-info .follow-btn:hover {
+    background-color: #00cc00;
+}
+.bio {
+    margin: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+}
+.bio h2 {
+    margin-top: 0;
+    color: #00ff00;
+}
+.achievements {
+    margin: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+.achievements h2 {
+    margin-top: 0;
+    color: yellow;
+}
+.achievements ul {
+    list-style-type: none;
+    padding: 0;
+}
+.achievements ul li {
+    margin: 10px 0;
+}
+.language-bundle {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+}
+.language-bundle h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+.language-bundle img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
